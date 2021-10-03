@@ -1,11 +1,16 @@
+<html>
+    <body>
 
+        <h1>
+        <?php
 
-<?php
+        $db = new SQLite3('test.db');
 
-$db = new SQLite3('test.db');
+        $version = $db->querySingle('SELECT SQLITE_VERSION()');
 
-$version = $db->querySingle('SELECT SQLITE_VERSION()');
+        echo $version; 
 
-echo $version; 
-
-?>
+        ?>
+        </h1>
+    </body>
+</html>

@@ -2,9 +2,10 @@
 
 $DB_PATH = './todo.db';
 
-//Task status values.
+//Task position values.
 $NOTSTARTED = 'Not Started';
 $INPROGRESS = 'In Progress';
 $COMPLETED = 'Completed';
 
+$ACCEPTABLE_POSITIONS = array($NOTSTARTED, $INPROGRESS, $COMPLETED);
 ?>
