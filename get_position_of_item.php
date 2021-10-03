@@ -8,6 +8,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $statement->bindValue(1, $item_to_search);
     $results = $statement->execute();
     $results_array = $results->fetchArray(SQLITE3_ASSOC);
-    echo json_encode($results_array);
+    if ($results_array) {
+        echo json_encode($results_array);
+    } else {
+        echo "No results found.";
+    }
 }
 ?>
