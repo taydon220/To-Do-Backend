@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $statement->bindParam(1, $new_item);
         $statement->bindParam(2, $new_position);
         $statement->execute();
-        $jsonarray = array("item"=>$new_item, "position"=>"new_position");
+        $jsonarray = array("item"=>$new_item, "position"=>$new_position);
         echo json_encode($jsonarray);
     }
 }
