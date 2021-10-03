@@ -8,5 +8,5 @@ $results = $db->query("SELECT item,position FROM items");
 while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
     $jsonArray[] = $row;
 }
-echo json_encode($jsonArray);
+return json_encode($jsonArray);
 ?>
