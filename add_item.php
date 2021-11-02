@@ -1,5 +1,7 @@
 <?php
-
+// This endpoint receives an HTTP POST from the front end with item and position in JSON format.
+// {"item": "Task to add.", "position": "Not Started"}
+// If testing POST with curl, Windows 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include('config.php');
     $inputjson = file_get_contents('php://input');
@@ -14,6 +16,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     // Check for any errors.
     if (empty($new_item) || empty($new_position) || $position_error) {
+        echo "Item: $new_item";
+        echo "Position: $new_position";
+        echo "Error with position: $position_error";
         echo "Error uploading item.";
         } else {
         $db = new SQLite3($DB_PATH);

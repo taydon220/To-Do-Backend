@@ -1,7 +1,4 @@
 <?php
-
-$DB_PATH = './todo.db';
-
 //Task position values.
 $NOTSTARTED = 'Not Started';
 $INPROGRESS = 'In Progress';
