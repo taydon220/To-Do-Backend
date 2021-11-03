@@ -1,0 +1,21 @@
+Supported Endpoints:
+
+Return all tasks:
+GET /task
+
+Return all tasks matching search string:
+GET /task/{searchString}
+
+Return task matching an id:
+GET /task/id/{id}
+
+Add new task:
+POST /task {"task": "Name of new task.", "position": "Not Started"} JSON
+
+Endpoints coming soon:
+
+Update an existing task record.
+PUT /task {JSON}
+
+Delete an existing task record.
+DELETE /task/{id} or /task/id/{id}
