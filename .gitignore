@@ -2,3 +2,4 @@
 vendor/
 .env
 data/
+/.vs/slnx.sqlite
